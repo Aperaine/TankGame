@@ -6,7 +6,6 @@
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(7.62939e-06, -7.62939e-06)
-scale = Vector2(3.225, 3.225)
 texture = ExtResource("1_2lrrp")
 region_enabled = true
-region_rect = Rect2(142, -0.0428462, 42, 40.0428)
+region_rect = Rect2(568, 0, 168, 160)
