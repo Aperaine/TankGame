@@ -1,11 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://x6qv4c4wd8rb"]
+[gd_scene load_steps=4 format=3 uid="uid://x6qv4c4wd8rb"]
 
 [ext_resource type="Texture2D" uid="uid://b316k0563lm3e" path="res://assets/Top-Down Tanks Redux/Vector/topdownTanks_vector.svg" id="1_2lrrp"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_v83k5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tq5y2"]
+radius = 76.4199
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_v83k5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Body" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Body"]
 position = Vector2(7.62939e-06, -7.62939e-06)
 texture = ExtResource("1_2lrrp")
 region_enabled = true
 region_rect = Rect2(568, 0, 168, 160)
+
+[node name="Head" type="Node2D" parent="."]
+position = Vector2(0, -15)
+
+[node name="Sprite2D" type="Sprite2D" parent="Head"]
+texture = ExtResource("1_2lrrp")
+offset = Vector2(7.62939e-06, -34)
+region_enabled = true
+region_rect = Rect2(904, 0, 48, 120)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tq5y2")
