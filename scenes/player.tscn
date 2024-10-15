@@ -1,12 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://x6qv4c4wd8rb"]
 
 [ext_resource type="Texture2D" uid="uid://b316k0563lm3e" path="res://assets/Top-Down Tanks Redux/Vector/topdownTanks_vector.svg" id="1_2lrrp"]
-[ext_resource type="Script" path="res://scenes/player.gd" id="1_v83k5"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_v83k5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tq5y2"]
 radius = 76.4199
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 5
 script = ExtResource("1_v83k5")
 
 [node name="Body" type="Node2D" parent="."]

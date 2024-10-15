@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhl4nmqkna2sx"]
+[gd_scene load_steps=3 format=3 uid="uid://dhl4nmqkna2sx"]
 
 [ext_resource type="PackedScene" uid="uid://x6qv4c4wd8rb" path="res://scenes/player.tscn" id="1_gfxjx"]
+[ext_resource type="Texture2D" uid="uid://ctfemk0oc7teb" path="res://assets/Top-Down Tanks Redux/Tilesheet/terrainTiles_default.png" id="2_vtmcv"]
 
 [node name="Game" type="Node2D"]
 
@@ -8,3 +9,9 @@
 position = Vector2(538, 462)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+position_smoothing_enabled = true
+
+[node name="TerrainTilesDefault" type="Sprite2D" parent="."]
+position = Vector2(724.625, 448.75)
+scale = Vector2(4.07617, 3.50586)
+texture = ExtResource("2_vtmcv")
