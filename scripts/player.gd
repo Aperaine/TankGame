@@ -15,9 +15,9 @@ func _process(delta: float) -> void:
 	#Movement
 	if canMove:
 		velocity = Vector2(Input.get_axis("p1-left","p1-right"),Input.get_axis("p1-forward","p1-backward"))
-		
 		velocity = velocity.normalized() * moveSpeed
 		
 		move_and_slide()
+	
 	
 	
